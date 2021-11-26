@@ -1,0 +1,459 @@
+{
+    "apps": {
+        "IIS": {
+            "cats": [
+                22
+            ],
+            "description": "Internet 信息服务（IIS）是 Microsoft  创建的可扩展的 Web 服务器软件，用于 Windows NT 家族。",
+            "headers": {
+                "Server": "^(?:Microsoft-)?IIS(?:/([\\d.]+))?\\;version:\\1"
+            },
+            "icon": "IIS.png",
+            "implies": [
+                "Windows Server",
+                "Windows"
+            ],
+            "layer": 3,
+            "website": "http://www.iis.net/"
+        },
+        "Apache": {
+            "cats": [
+                22
+            ],
+            "description": "Apache 是​​免费的开源跨平台Web 服务器软件。",
+            "headers": {
+                "Server": "(?:Apache(?:$|/([\\d.]+)|[^/-])|(?:^|\\b)HTTPD)\\;version:\\1"
+            },
+            "icon": "Apache.svg",
+            "layer": 3,
+            "website": "http://apache.org"
+        },
+        "Apache Tomcat": {
+            "cats": [
+                22
+            ],
+            "description": "Apache Tomcat是Java Servlet，JavaServer Pages，Java Expression Language和WebSocket技术的开源实现。",
+            "headers": {
+                "Server": "^Apache-Coyote",
+                "X-Powered-By": "\\bTomcat\\b(?:-([\\d.]+))?\\;version:\\1"
+            },
+            "html": [
+                "<title>Apache Tomcat/?([\\d\\.]+)?</title>\\;version:\\1",
+                "href=\"tomcat.css"
+            ],
+            "icon": "Apache Tomcat.svg",
+            "implies": "Java",
+            "layer": 3,
+            "website": "http://tomcat.apache.org"
+        },
+        "Java": {
+            "cats": [
+                27
+            ],
+            "cookies": {
+                "JSESSIONID": ""
+            },
+            "description": "Java 是基于类的，面向对象的编程语言，旨在具有尽可能少的实现依赖性。",
+            "icon": "Java.png",
+            "layer": 2,
+            "website": "http://java.com"
+        },
+        "Windows": {
+            "cats": [
+                28
+            ],
+            "description": "Microsoft Windows 操作系统是美国微软公司研发的一套操作系统。",
+            "icon": "Microsoft.png",
+            "layer": 4,
+            "website": "http://microsoft.com"
+        },
+        "Windows Server": {
+            "cats": [
+                28
+            ],
+            "description": "Windows Server 是一组服务器操作系统的商标名称。",
+            "headers": {
+                "Server": "Win32|Win64"
+            },
+            "icon": "WindowsServer.png",
+            "layer": 4,
+            "website": "http://microsoft.com/windowsserver"
+        },
+        "ckeditor": {
+            "cats": [
+                24
+            ],
+            "description": "CKEditor 是一种 WYSIWYG 富文本编辑器，可直接在网页或在线应用程序内部编写内容。它的核心代码是用 JavaScript 编写的，由 CKSource 开发。CKEditor 可在开源和商业许可下使用。",
+            "icon": "CKEditor.png",
+            "js": {
+                "CKEDITOR": "",
+                "CKEDITOR.version": "^(.+)$\\;version:\\1",
+                "CKEDITOR_BASEPATH": ""
+            },
+            "layer": 1,
+            "website": "http://ckeditor.com"
+        },
+        "iCMS": {
+            "cats": [
+                1
+            ],
+            "description": "iCMS 是一套采用 PHP 和 MySQL 构建的高效简洁的内容管理系统,为您的网站提供一个完美的开源解决方案。",
+            "layer": 1,
+            "meta": {
+                "description": "icms",
+                "keywords": "icms"
+            },
+            "implies": [
+            	"PHP",
+            	"MySQL"
+            ],
+            "script": "iCMS.min.js",
+            "website": "https://www.icmsdev.com/"
+        },
+        "PHP": {
+            "cats": [
+                27
+            ],
+            "cookies": {
+                "PHPSESSID": ""
+            },
+            "description": "PHP是用于Web开发的通用脚本语言。",
+            "headers": {
+                "Server": "php/?([\\d.]+)?\\;version:\\1",
+                "X-Powered-By": "^php/?([\\d.]+)?\\;version:\\1"
+            },
+            "icon": "PHP.svg",
+            "layer": 2,
+            "url": "\\.php(?:$|\\?)",
+            "website": "http://www.php.net"
+        },
+        "MySQL": {
+            "cats": [
+                34
+            ],
+            "description": "MySQL 是一个开源关系数据库管理系统。",
+            "icon": "MySQL.svg",
+            "layer": 3,
+            "website": "http://www.mysql.com/"
+        }
+    },
+    "categories": {
+        "1": {
+            "name": "内容管理（CMS）",
+            "priority": 1
+        },
+        "10": {
+            "name": "分析统计",
+            "priority": 9
+        },
+        "11": {
+            "name": "博客",
+            "priority": 1
+        },
+        "12": {
+            "name": "JS 框架",
+            "priority": 3
+        },
+        "13": {
+            "name": "问题跟踪",
+            "priority": 2
+        },
+        "14": {
+            "name": "视频播放器",
+            "priority": 9
+        },
+        "15": {
+            "name": "评论系统",
+            "priority": 9
+        },
+        "16": {
+            "name": "图形验证码",
+            "priority": 9
+        },
+        "17": {
+            "name": "字体脚本",
+            "priority": 9
+        },
+        "18": {
+            "name": "Web 框架",
+            "priority": 2
+        },
+        "19": {
+            "name": "其它",
+            "priority": 9
+        },
+        "2": {
+            "name": "留言板",
+            "priority": 1
+        },
+        "20": {
+            "name": "编辑器",
+            "priority": 9
+        },
+        "21": {
+            "name": "学习管理系统",
+            "priority": 1
+        },
+        "22": {
+            "name": "Web 服务器",
+            "priority": 9
+        },
+        "23": {
+            "name": "缓存工具",
+            "priority": 9
+        },
+        "24": {
+            "name": "富文本编辑器",
+            "priority": 9
+        },
+        "25": {
+            "name": "JS 图形插件",
+            "priority": 3
+        },
+        "26": {
+            "name": "移动框架",
+            "priority": 3
+        },
+        "27": {
+            "name": "程序语言",
+            "priority": 4
+        },
+        "28": {
+            "name": "操作系统",
+            "priority": 5
+        },
+        "29": {
+            "name": "搜索引擎",
+            "priority": 9
+        },
+        "3": {
+            "name": "数据库管理",
+            "priority": 9
+        },
+        "30": {
+            "name": "Web 邮件",
+            "priority": 9
+        },
+        "31": {
+            "name": "CDN",
+            "priority": 9
+        },
+        "32": {
+            "name": "自动化营销",
+            "priority": 9
+        },
+        "33": {
+            "name": "Web 服务器扩展",
+            "priority": 9
+        },
+        "34": {
+            "name": "数据库",
+            "priority": 9
+        },
+        "35": {
+            "name": "地图",
+            "priority": 9
+        },
+        "36": {
+            "name": "广告网络",
+            "priority": 9
+        },
+        "37": {
+            "name": "网络设备",
+            "priority": 9
+        },
+        "38": {
+            "name": "媒体服务器",
+            "priority": 1
+        },
+        "39": {
+            "name": "网络摄像头",
+            "priority": 9
+        },
+        "4": {
+            "name": "文档工具",
+            "priority": 9
+        },
+        "40": {
+            "name": "打印机",
+            "priority": 9
+        },
+        "41": {
+            "name": "付款处理器",
+            "priority": 9
+        },
+        "42": {
+            "name": "标签管理",
+            "priority": 9
+        },
+        "43": {
+            "name": "付费",
+            "priority": 9
+        },
+        "44": {
+            "name": "持续集成",
+            "priority": 9
+        },
+        "45": {
+            "name": "控制系统",
+            "priority": 9
+        },
+        "46": {
+            "name": "远程访问",
+            "priority": 9
+        },
+        "47": {
+            "name": "开发工具",
+            "priority": 9
+        },
+        "48": {
+            "name": "网络存储",
+            "priority": 9
+        },
+        "49": {
+            "name": "订阅阅读器",
+            "priority": 1
+        },
+        "5": {
+            "name": "窗口小部件",
+            "priority": 9
+        },
+        "50": {
+            "name": "文档管理系统",
+            "priority": 1
+        },
+        "51": {
+            "name": "引导页",
+            "priority": 2
+        },
+        "52": {
+            "name": "在线聊天室",
+            "priority": 9
+        },
+        "53": {
+            "name": "客户关系管理（CRM)）",
+            "priority": 9
+        },
+        "54": {
+            "name": "搜索引擎优化（SEO）",
+            "priority": 9
+        },
+        "55": {
+            "name": "会计",
+            "priority": 1
+        },
+        "56": {
+            "name": "挖矿程序",
+            "priority": 8
+        },
+        "57": {
+            "name": "静态网站生成器",
+            "priority": 1
+        },
+        "58": {
+            "name": "客服机器人",
+            "priority": 8
+        },
+        "59": {
+            "name": "JS 库",
+            "priority": 9
+        },
+        "6": {
+            "name": "电子商务",
+            "priority": 1
+        },
+        "60": {
+            "name": "容器",
+            "priority": 8
+        },
+        "61": {
+            "name": "SaaS",
+            "priority": 8
+        },
+        "62": {
+            "name": "PaaS",
+            "priority": 8
+        },
+        "63": {
+            "name": "IaaS",
+            "priority": 8
+        },
+        "64": {
+            "name": "反向代码",
+            "priority": 7
+        },
+        "65": {
+            "name": "负载均衡",
+            "priority": 7
+        },
+        "66": {
+            "name": "UI 框架",
+            "priority": 7
+        },
+        "67": {
+            "name": "Cookie 合规",
+            "priority": 9
+        },
+        "68": {
+            "name": "无障碍",
+            "priority": 9
+        },
+        "69": {
+            "name": "社交入口",
+            "priority": 6
+        },
+        "7": {
+            "name": "电子相册",
+            "priority": 1
+        },
+        "70": {
+            "name": "SSL/TLS 证书颁发机构",
+            "priority": 9
+        },
+        "71": {
+            "name": "联盟销售",
+            "priority": 9
+        },
+        "72": {
+            "name": "预约系统",
+            "priority": 9
+        },
+        "73": {
+            "name": "问卷调查",
+            "priority": 9
+        },
+        "74": {
+            "name": "A/B 测试",
+            "priority": 9
+        },
+        "75": {
+            "name": "Email",
+            "priority": 9
+        },
+        "8": {
+            "name": "知识库",
+            "priority": 1
+        },
+        "9": {
+            "name": "主机控制板",
+            "priority": 1
+        }
+    },
+    "layers": {
+        "1": {
+            "name": "应用"
+        },
+        "2": {
+            "name": "支持"
+        },
+        "3": {
+            "name": "服务"
+        },
+        "4": {
+            "name": "系统"
+        },
+        "5": {
+            "name": "硬件"
+        }
+    }
+}

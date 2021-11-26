@@ -1,0 +1,13 @@
+{
+    "apps": {
+      "天融信防火墙": {
+        "cats": [
+          37, 1005
+        ],
+        "cert": "^TOPSEC PRODUCTS$",
+        "layer": 1,
+        "icon": "topsec.ico",
+        "website": "https://www.topsec.com.cn/"
+      }
+    }
+}
