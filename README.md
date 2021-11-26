@@ -1,20 +1,22 @@
-# 简介
+# GWAF
 
-使用 Go 语言开发的 Web 指纹检测引擎。本引擎基于 Chromium 浏览器来收集 Web 应用信息，然后从 `响应头`、`响应页面`、`JS 变量`、`JS 文件`, `收藏图标`、`SSL 证书`、`robots.txt` 等维度来进行 Web 应用的指纹识别。
+> 一个使用 Go 语言开发的 Web 应用指纹识别引擎。本引擎基于 Chromium 浏览器来收集 Web 应用信息，然后分别从 `响应头`、`响应页面`、`JS 变量`、`JS 文件`, `收藏图标`、`SSL 证书`、`robots.txt` 等维度来进行 Web 应用的指纹识别。
 
 **运行环境**
 
 - 操作系统：Windows X64 / Linux X86_64 / Mac OSX amd64
 - 浏览器：  Chromium（首次运行时程序会自动下载，请耐心等待）
 
-# 工具目录结构
+# 目录结构
 
 ```
 <目录>
  |-- gwaf_<os>_<arch>       # 主程序
- |-- apps.json              # 主指纹库文件（兼容 [Wappalyzer <= 6.2.3](https://github.com/AliasIO/wappalyzer/blob/v6.2.3/src/apps.json) 以前版本指纹库）
+ |-- apps.json              # 主指纹库文件
  |-- custom.json            # 自定义规则库文件
 ```
+
+**提示**: 本引擎的指纹库与 [Wappalyzer <= 6.2.3](https://github.com/AliasIO/wappalyzer/blob/v6.2.3/src/apps.json) 版本完全兼容，可直接下载覆盖本引擎的 `apps.json` 主指纹库文件。
 
 # 用法
 
